@@ -1,0 +1,33 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "PayRequest" [ref=e4] [cursor=pointer]:
+        - /url: /dashboard
+      - generic [ref=e5]:
+        - generic [ref=e6]: bob@payrequest.test
+        - button "Sign out" [ref=e7]
+  - main [ref=e8]:
+    - generic [ref=e10]:
+      - generic [ref=e11]:
+        - heading "Dashboard" [level=1] [ref=e12]
+        - link "New request" [ref=e13] [cursor=pointer]:
+          - /url: /requests/new
+      - generic [ref=e14]:
+        - tablist [ref=e15]:
+          - tab "Incoming" [selected] [ref=e16]
+          - tab "Outgoing" [ref=e17]
+        - generic [ref=e18]:
+          - combobox "Status filter" [ref=e19]:
+            - option "All" [selected]
+            - option "Pending"
+            - option "Paid"
+            - option "Declined"
+            - option "Cancelled"
+            - option "Expired"
+          - searchbox "Search note or email…" [ref=e20]
+        - tabpanel "Incoming" [ref=e21]:
+          - paragraph [ref=e22]: No incoming requests yet.
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e28] [cursor=pointer]:
+    - img [ref=e29]
+  - alert [ref=e32]

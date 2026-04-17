@@ -1,0 +1,51 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "PayRequest" [ref=e4] [cursor=pointer]:
+        - /url: /dashboard
+      - generic [ref=e5]:
+        - generic [ref=e6]: bob@payrequest.test
+        - button "Sign out" [ref=e7]
+  - main [ref=e8]:
+    - generic [ref=e10]:
+      - generic [ref=e11]:
+        - heading "Dashboard" [level=1] [ref=e12]
+        - link "New request" [ref=e13] [cursor=pointer]:
+          - /url: /requests/new
+      - generic [ref=e14]:
+        - tablist [ref=e15]:
+          - tab "Incoming" [active] [selected] [ref=e16]
+          - tab "Outgoing" [ref=e17]
+        - generic [ref=e18]:
+          - combobox "Status filter" [ref=e19]:
+            - option "All" [selected]
+            - option "Pending"
+            - option "Paid"
+            - option "Declined"
+            - option "Cancelled"
+            - option "Expired"
+          - searchbox "Search note or email…" [ref=e20]
+        - tabpanel "Incoming" [ref=e21]:
+          - link "alice@payrequest.test Expired Stage 9 expired probe $5.50" [ref=e33] [cursor=pointer]:
+            - /url: /requests/23460f72-17cc-44ed-9e75-abb554acc68a
+            - generic [ref=e35]:
+              - generic [ref=e36]:
+                - generic [ref=e37]:
+                  - generic [ref=e38]: alice@payrequest.test
+                  - generic [ref=e39]: Expired
+                - paragraph [ref=e40]: Stage 9 expired probe
+              - generic [ref=e41]: $5.50
+          - link "alice@payrequest.test Pending Stage 9 share probe expires in 6d 23h $33.00" [ref=e42] [cursor=pointer]:
+            - /url: /requests/ae3b3a73-d34d-4bf6-ab44-8ee6cdd5eafd
+            - generic [ref=e44]:
+              - generic [ref=e45]:
+                - generic [ref=e46]:
+                  - generic [ref=e47]: alice@payrequest.test
+                  - generic [ref=e48]: Pending
+                - paragraph [ref=e49]: Stage 9 share probe
+                - paragraph [ref=e50]: expires in 6d 23h
+              - generic [ref=e51]: $33.00
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e28] [cursor=pointer]:
+    - img [ref=e29]
+  - alert [ref=e32]
