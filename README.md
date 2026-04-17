@@ -4,6 +4,9 @@ A Venmo-style peer-to-peer payment request web app built end-to-end for the **Lo
 
 **Live:** https://lovie-payment-task.vercel.app
 **Repo:** https://github.com/RgpGny/lovie-payment-task
+**Video walkthrough:** https://youtu.be/kqVec--hT58
+
+[![Watch the full build on YouTube](https://img.youtube.com/vi/kqVec--hT58/maxresdefault.jpg)](https://youtu.be/kqVec--hT58)
 
 Test accounts (both password `password123`):
 
