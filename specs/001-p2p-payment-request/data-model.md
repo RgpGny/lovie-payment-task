@@ -66,20 +66,9 @@ begin
 end $$;
 ```
 
-## Views
+## Public share-link reads (no view)
 
-### `public_requests`
-
-Read-only projection of `payment_requests` for public share-link consumers. Joins to `profiles` to expose `sender_email` instead of the internal `sender_id`. Does NOT expose `paid_at / declined_at / cancelled_at` internal timestamps.
-
-```sql
-create view public_requests as
-  select id, share_link, amount_cents, note, status, expires_at, created_at,
-    (select email from profiles where id = sender_id) as sender_email,
-    recipient_email
-  from payment_requests;
-grant select on public_requests to anon, authenticated;
-```
+The original design proposed a `public_requests` view granted to `anon`. Supabase's security advisor flags views that bypass RLS as an error-level risk, so the implementation instead serves share-link reads from the Next.js route `/api/requests/share/[link]` using a server-only Supabase client initialized with the service-role key. The route hand-projects the safe subset of columns (`id`, `share_link`, `amount_cents`, `note`, `status`, `expires_at`, `created_at`, `sender_email`, `recipient_email`) and returns them as `PublicRequestView`. No anon database role ever holds permission on the raw tables.
 
 ## Row Level Security
 

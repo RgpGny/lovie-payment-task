@@ -4,7 +4,7 @@
 
 **Path params**: `link` (the `share_link` token, 21 chars).
 
-**Behavior**: `SELECT * FROM public_requests WHERE share_link = $1 LIMIT 1`. No RLS is needed because the view already projects only safe columns.
+**Behavior**: The route runs on the server using a service-role Supabase client to bypass RLS for this specific read. It selects only the public-projection columns from `payment_requests` joined to `profiles.email AS sender_email`, filtered by `share_link = $1 LIMIT 1`. No anon role ever touches the raw tables directly.
 
 **Response shape** (`PublicRequestView`):
 
