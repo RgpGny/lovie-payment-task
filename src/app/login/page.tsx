@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Suspense } from "react";
 
 import { LoginForm } from "./login-form";
 
@@ -11,7 +12,9 @@ export default function LoginPage() {
           Sign in to PayRequest
         </p>
       </div>
-      <LoginForm />
+      <Suspense fallback={null}>
+        <LoginForm />
+      </Suspense>
       <p className="mt-6 text-center text-sm text-muted-foreground">
         Don&apos;t have an account?{" "}
         <Link className="font-medium text-foreground underline" href="/signup">
