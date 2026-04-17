@@ -1,0 +1,35 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e26]:
+    - generic [ref=e27]:
+      - link "PayRequest" [ref=e28] [cursor=pointer]:
+        - /url: /dashboard
+      - generic [ref=e29]:
+        - generic [ref=e30]: bob@payrequest.test
+        - button "Sign out" [ref=e31]
+  - main [ref=e32]:
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - heading "Request" [level=1] [ref=e36]
+        - link "Back to dashboard" [ref=e37] [cursor=pointer]:
+          - /url: /dashboard
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - generic [ref=e41]: $19.00
+            - generic [ref=e42]: Pending
+          - paragraph [ref=e43]: From alice@payrequest.test
+        - generic [ref=e44]:
+          - paragraph [ref=e45]: "Note: Stage 8 pay probe"
+          - paragraph [ref=e46]: expires in 6d 23h
+          - generic [ref=e47]:
+            - button "Pay" [ref=e48]
+            - button "Decline" [ref=e49]
+          - generic [ref=e50]:
+            - paragraph [ref=e51]: Shareable link
+            - generic [ref=e52]:
+              - code [ref=e53]: http://localhost:3000/pay/stage8_pay_probe_xxxxx
+              - button "Copy" [ref=e54]
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e22] [cursor=pointer]:
+    - img [ref=e23]
+  - alert [ref=e16]

@@ -1,0 +1,36 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e26]:
+    - generic [ref=e27]:
+      - link "PayRequest" [ref=e28] [cursor=pointer]:
+        - /url: /dashboard
+      - generic [ref=e29]:
+        - generic [ref=e30]: bob@payrequest.test
+        - button "Sign out" [ref=e31]
+  - main [ref=e32]:
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - heading "Request" [level=1] [ref=e36]
+        - link "Back to dashboard" [ref=e37] [cursor=pointer]:
+          - /url: /dashboard
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - generic [ref=e41]: $19.00
+            - generic [ref=e42]: Paid
+          - paragraph [ref=e43]: From alice@payrequest.test
+        - generic [ref=e44]:
+          - paragraph [ref=e45]: "Note: Stage 8 pay probe"
+          - paragraph [ref=e46]: Paid 17.04.2026 13:22:13
+          - generic [ref=e50]:
+            - paragraph [ref=e51]: Shareable link
+            - generic [ref=e52]:
+              - code [ref=e53]: http://localhost:3000/pay/stage8_pay_probe_xxxxx
+              - button "Copy" [ref=e54]
+  - region "Notifications alt+T":
+    - list:
+      - listitem [ref=e55]:
+        - img [ref=e57]
+        - generic [ref=e60]: Payment recorded
+  - button "Open Next.js Dev Tools" [ref=e22] [cursor=pointer]:
+    - img [ref=e23]
+  - alert [ref=e16]
