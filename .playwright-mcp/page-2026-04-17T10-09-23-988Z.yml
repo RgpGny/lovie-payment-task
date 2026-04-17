@@ -1,0 +1,46 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "PayRequest" [ref=e4] [cursor=pointer]:
+        - /url: /dashboard
+      - generic [ref=e5]:
+        - generic [ref=e6]: alice@payrequest.test
+        - button "Sign out" [ref=e7]
+  - main [ref=e8]:
+    - generic [ref=e10]:
+      - generic [ref=e11]:
+        - heading "New request" [level=1] [ref=e12]
+        - link "Back to dashboard" [ref=e13] [cursor=pointer]:
+          - /url: /dashboard
+      - generic [ref=e14]:
+        - generic [ref=e16]: Ask someone for money
+        - generic [ref=e18]:
+          - generic [ref=e19]:
+            - generic [ref=e20]: Recipient email
+            - textbox "Recipient email" [ref=e21]:
+              - /placeholder: bob@payrequest.test
+              - text: bob@payrequest.test
+          - generic [ref=e22]:
+            - generic [ref=e23]: Amount (USD)
+            - generic [ref=e24]:
+              - generic: $
+              - textbox "Amount (USD)" [ref=e25]:
+                - /placeholder: "25.00"
+                - text: "42.50"
+            - paragraph [ref=e26]: Maximum $999,999.99.
+          - generic [ref=e27]:
+            - generic [ref=e28]: Note (optional)
+            - textbox "Note (optional)" [ref=e29]:
+              - /placeholder: Pizza last night
+              - text: Stage 6 smoke test — pizza last night
+            - paragraph [ref=e30]: 37/200 characters.
+          - button "Sending request…" [disabled]
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e42] [cursor=pointer]:
+    - generic [ref=e45]:
+      - text: Rendering
+      - generic [ref=e46]:
+        - generic [ref=e47]: .
+        - generic [ref=e48]: .
+        - generic [ref=e49]: .
+  - alert [ref=e32]
