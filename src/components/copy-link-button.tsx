@@ -1,17 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
 
 export function CopyLinkButton({ shareLink }: { shareLink: string }) {
   const [copied, setCopied] = useState(false);
+  // Render the relative path on both SSR and first client paint so hydration
+  // matches, then upgrade to the absolute URL in an effect.
+  const [url, setUrl] = useState(`/pay/${shareLink}`);
 
-  const url =
-    typeof window !== "undefined"
-      ? `${window.location.origin}/pay/${shareLink}`
-      : `/pay/${shareLink}`;
+  useEffect(() => {
+    setUrl(`${window.location.origin}/pay/${shareLink}`);
+  }, [shareLink]);
 
   async function copy() {
     try {

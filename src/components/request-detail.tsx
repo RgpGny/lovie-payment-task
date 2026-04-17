@@ -150,6 +150,12 @@ export function RequestDetail({
   );
 }
 
+const TIMESTAMP_FMT = new Intl.DateTimeFormat("en-US", {
+  dateStyle: "medium",
+  timeStyle: "short",
+  timeZone: "UTC",
+});
+
 function timestampFor(req: PaymentRequestView): string {
   const t =
     req.status === "paid"
@@ -159,12 +165,12 @@ function timestampFor(req: PaymentRequestView): string {
         : req.status === "cancelled"
           ? req.cancelled_at
           : null;
-  if (!t) return `Created ${new Date(req.created_at).toLocaleString()}`;
+  if (!t) return `Created ${TIMESTAMP_FMT.format(new Date(req.created_at))} UTC`;
   const verb =
     req.status === "paid"
       ? "Paid"
       : req.status === "declined"
         ? "Declined"
         : "Cancelled";
-  return `${verb} ${new Date(t).toLocaleString()}`;
+  return `${verb} ${TIMESTAMP_FMT.format(new Date(t))} UTC`;
 }
