@@ -1,17 +1,26 @@
+<div align="center">
+
 # PayRequest
 
-A Venmo-style peer-to-peer payment request web app built end-to-end for the **Lovie interview assignment** — spec to production, AI-driven, recorded on video.
+**A Venmo-style P2P payment request app — built end-to-end, AI-driven, recorded on video.**
+_Lovie interview assignment · spec → production in one live session._
 
-**Live:** https://lovie-payment-task.vercel.app
-**Repo:** https://github.com/RgpGny/lovie-payment-task
-**Video walkthrough:** https://youtu.be/kqVec--hT58
+[![Live demo](https://img.shields.io/badge/Live-lovie--payment--task.vercel.app-22c55e?style=for-the-badge&logo=vercel&logoColor=white)](https://lovie-payment-task.vercel.app)
+[![Source on GitHub](https://img.shields.io/badge/Source-RgpGny%2Flovie--payment--task-24292e?style=for-the-badge&logo=github)](https://github.com/RgpGny/lovie-payment-task)
+[![Watch the build](https://img.shields.io/badge/Watch_the_build-YouTube-ff0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/kqVec--hT58)
 
-[![Watch the full build on YouTube](https://img.youtube.com/vi/kqVec--hT58/maxresdefault.jpg)](https://youtu.be/kqVec--hT58)
+[![Full build walkthrough on YouTube](https://img.youtube.com/vi/kqVec--hT58/maxresdefault.jpg)](https://youtu.be/kqVec--hT58)
 
-Test accounts (both password `password123`):
+</div>
 
-- `alice@payrequest.test`
-- `bob@payrequest.test`
+### Try it on the live URL
+
+Both accounts share password `password123`:
+
+| Role | Email |
+| --- | --- |
+| Sender in the demo | `alice@payrequest.test` |
+| Recipient in the demo | `bob@payrequest.test` |
 
 ---
 
